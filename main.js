@@ -166,6 +166,7 @@ var AppModule = /** @class */ (function () {
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]
             ],
             providers: [],
@@ -316,7 +317,7 @@ var ChooseCardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@font-face {\r\n    font-family: Droid Arabic Kufi;\r\n    src: url('Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf') format(\"opentype\");\r\n  }\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZmlsbC1jYXJkL2ZpbGwtY2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksOEJBQThCO0lBQzlCLHlFQUEwRjtFQUM1RiIsImZpbGUiOiJzcmMvYXBwL2ZpbGwtY2FyZC9maWxsLWNhcmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBmb250LWZhY2Uge1xyXG4gICAgZm9udC1mYW1pbHk6IERyb2lkIEFyYWJpYyBLdWZpO1xyXG4gICAgc3JjOiB1cmwoLi4vLi4vYXNzZXRzL2ZvbnRzL0Ryb2lkLkFyYWJpYy5LdWZpX0Rvd25sb2FkU29mdHdhcmUuaVJfLnR0ZikgZm9ybWF0KFwib3BlbnR5cGVcIik7XHJcbiAgfVxyXG4gICJdfQ== */"
+module.exports = "@font-face {\r\nfont-family: Droid Arabic Kufi;\r\nsrc: url('Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf') format(\"opentype\");\r\n}\r\n\r\n#wrapper{\r\nwidth:850px;\r\nmargin: 0 auto;\r\ntext-align: center;\r\n}\r\n\r\nform{\r\nmargin:0 !important;\r\n}\r\n\r\nform input{\r\nwidth:820px;\r\nheight:45px;\r\nfont-size: 36px;\r\npadding:10px;\r\nmargin:10px 0;\r\nborder: 1px solid black;\r\n}\r\n\r\n#download{\r\nbackground-color: #4CAF50;\r\nborder: none;\r\ncolor: white;\r\npadding: 15px 60px;\r\ntext-align: center;\r\ntext-decoration: none;\r\ndisplay: inline-block;\r\nfont-size: 16px;\r\nmargin: 15px 2px;\r\ncursor: pointer;\r\nfont-size: 36px;\r\nfont-weight: bold;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZmlsbC1jYXJkL2ZpbGwtY2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0EsOEJBQThCO0FBQzlCLHlFQUEwRjtBQUMxRjs7QUFFQTtBQUNBLFdBQVc7QUFDWCxjQUFjO0FBQ2Qsa0JBQWtCO0FBQ2xCOztBQUVBO0FBQ0EsbUJBQW1CO0FBQ25COztBQUVBO0FBQ0EsV0FBVztBQUNYLFdBQVc7QUFDWCxlQUFlO0FBQ2YsWUFBWTtBQUNaLGFBQWE7QUFDYix1QkFBdUI7QUFDdkI7O0FBRUE7QUFDQSx5QkFBeUI7QUFDekIsWUFBWTtBQUNaLFlBQVk7QUFDWixrQkFBa0I7QUFDbEIsa0JBQWtCO0FBQ2xCLHFCQUFxQjtBQUNyQixxQkFBcUI7QUFDckIsZUFBZTtBQUNmLGdCQUFnQjtBQUNoQixlQUFlO0FBQ2YsZUFBZTtBQUNmLGlCQUFpQjtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL2ZpbGwtY2FyZC9maWxsLWNhcmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBmb250LWZhY2Uge1xyXG5mb250LWZhbWlseTogRHJvaWQgQXJhYmljIEt1Zmk7XHJcbnNyYzogdXJsKC4uLy4uL2Fzc2V0cy9mb250cy9Ecm9pZC5BcmFiaWMuS3VmaV9Eb3dubG9hZFNvZnR3YXJlLmlSXy50dGYpIGZvcm1hdChcIm9wZW50eXBlXCIpO1xyXG59XHJcblxyXG4jd3JhcHBlcntcclxud2lkdGg6ODUwcHg7XHJcbm1hcmdpbjogMCBhdXRvO1xyXG50ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbmZvcm17XHJcbm1hcmdpbjowICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbmZvcm0gaW5wdXR7XHJcbndpZHRoOjgyMHB4O1xyXG5oZWlnaHQ6NDVweDtcclxuZm9udC1zaXplOiAzNnB4O1xyXG5wYWRkaW5nOjEwcHg7XHJcbm1hcmdpbjoxMHB4IDA7XHJcbmJvcmRlcjogMXB4IHNvbGlkIGJsYWNrO1xyXG59XHJcblxyXG4jZG93bmxvYWR7XHJcbmJhY2tncm91bmQtY29sb3I6ICM0Q0FGNTA7XHJcbmJvcmRlcjogbm9uZTtcclxuY29sb3I6IHdoaXRlO1xyXG5wYWRkaW5nOiAxNXB4IDYwcHg7XHJcbnRleHQtYWxpZ246IGNlbnRlcjtcclxudGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG5kaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbmZvbnQtc2l6ZTogMTZweDtcclxubWFyZ2luOiAxNXB4IDJweDtcclxuY3Vyc29yOiBwb2ludGVyO1xyXG5mb250LXNpemU6IDM2cHg7XHJcbmZvbnQtd2VpZ2h0OiBib2xkO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -327,7 +328,7 @@ module.exports = "@font-face {\r\n    font-family: Droid Arabic Kufi;\r\n    src
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<input type=\"text\"  id=\"to\" (input)=\"update()\">\n<input type=\"text\"  id=\"from\" (input)=\"update()\">\ndafdsf\n\n<canvas id=\"myCanvas\" width=\"850\" height=\"850\" style=\"border: 1px solid black\" dir=\"rtl\">\n\n</canvas>\n\n<a id=\"download\" download=\"myImage.jpg\">Download to myImage.jpg</a>\n"
+module.exports = "<div id='wrapper'>\n\n  <form [formGroup]=\"form\" dir=\"rtl\" style=\"margin:30px;\" autocomplete=\"off\">\n\n    <div class=\"form-row\">\n    \n      <div class=\"col-1\"></div>\n\n      <div class=\"form-group col-10\">\n        <input type=\"text\" id=\"to\" formControlName=\"to\" class=\"form-control\" (input)=\"update()\" placeholder=\"إهداء إلى\">\n      </div>\n\n    </div>\n\n    <div class=\"form-row\">\n      \n      <div class=\"col-1\"></div>\n\n      <div class=\"form-group col-10\">\n        <input type=\"text\" id=\"from\" formControlName=\"from\" class=\"form-control\" (input)=\"update()\" placeholder=\"إهداء من\">\n      </div>\n\n    </div>\n\n  </form>\n\n  <canvas id=\"myCanvas\" width=\"850\" height=\"850\" style=\"border: 1px solid black\" dir=\"rtl\">\n\n  </canvas>\n\n  <a type=\"button\" class=\"btn btn-success btn-lg\" id=\"download\" download=\"myImage.jpg\">حفظ</a>\n  \n</div>\n"
 
 /***/ }),
 
@@ -344,15 +345,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+
 
 
 
 var FillCardComponent = /** @class */ (function () {
-    function FillCardComponent(route) {
+    function FillCardComponent(route, fb) {
         var _this = this;
         this.route = route;
+        this.fb = fb;
         this.card = {};
         this.route.params.subscribe(function (params) { _this.card.no = params.card; _this.ngOnInit(); });
+        this.form = fb.group({
+            from: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            to: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+        });
     }
     FillCardComponent.prototype.ngAfterViewInit = function () {
         if (this.card.no == '0') {
@@ -398,7 +406,8 @@ var FillCardComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./fill-card.component.html */ "./src/app/fill-card/fill-card.component.html"),
             styles: [__webpack_require__(/*! ./fill-card.component.css */ "./src/app/fill-card/fill-card.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
     ], FillCardComponent);
     return FillCardComponent;
 }());
